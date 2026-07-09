@@ -57,7 +57,7 @@ export function SiteFooter() {
               <Sailboat className="size-5" aria-hidden="true" />
             </span>
             <span className="font-heading text-xl font-bold tracking-tight">
-              Búzios <em className="font-medium italic">Trip Tour</em>
+              Búzios <span className="text-sand">Trip Tour</span>
             </span>
           </div>
           <p className="max-w-xs text-sm leading-relaxed text-ink-foreground/70">

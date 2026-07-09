@@ -13,7 +13,7 @@ export function CategoryShowcase() {
             O que fazemos
           </p>
           <h2 className="mt-3 font-heading text-3xl font-semibold text-balance text-foreground sm:text-4xl">
-            Escolha a sua próxima <em className="italic text-ocean">experiência</em>
+            Escolha a sua próxima <span className="text-ocean">experiência</span>
           </h2>
         </div>
         <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">

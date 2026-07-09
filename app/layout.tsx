@@ -1,12 +1,11 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Playfair_Display, DM_Sans } from 'next/font/google'
+import { Bricolage_Grotesque, DM_Sans } from 'next/font/google'
 import './globals.css'
 
-const heading = Playfair_Display({
+const heading = Bricolage_Grotesque({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  style: ['normal', 'italic'],
+  weight: ['500', '600', '700', '800'],
   variable: '--font-heading',
 })
 
@@ -25,7 +24,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#1a2740',
+  themeColor: '#153a63',
 }
 
 export default function RootLayout({

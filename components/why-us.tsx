@@ -33,7 +33,7 @@ export function WhyUs() {
             Por que a Búzios Trip Tour
           </p>
           <h2 className="mt-3 font-heading text-3xl font-semibold text-balance sm:text-4xl">
-            Viaje com quem cuida de <em className="italic text-sand">cada detalhe</em>
+            Viaje com quem cuida de <span className="text-sand">cada detalhe</span>
           </h2>
         </Reveal>
 

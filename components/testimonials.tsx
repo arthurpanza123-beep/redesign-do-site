@@ -35,7 +35,7 @@ export function Testimonials() {
             Depoimentos
           </p>
           <h2 className="mt-3 font-heading text-3xl font-semibold text-balance text-foreground sm:text-4xl">
-            O que dizem <em className="italic text-ocean">nossos viajantes</em>
+            O que dizem <span className="text-ocean">nossos viajantes</span>
           </h2>
         </Reveal>
 

@@ -29,7 +29,7 @@ function Logo() {
       </span>
       <span className="flex flex-col leading-none">
         <span className="font-heading text-lg font-bold tracking-tight text-ink-foreground">
-          Búzios <em className="font-medium italic">Trip Tour</em>
+          Búzios <span className="text-sand">Trip Tour</span>
         </span>
         <span className="mt-0.5 text-[10px] font-medium uppercase tracking-[0.22em] text-ink-foreground/60">
           Região dos Lagos · RJ

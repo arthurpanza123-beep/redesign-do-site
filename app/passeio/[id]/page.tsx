@@ -160,7 +160,7 @@ export default async function TourDetailPage({ params }: { params: Promise<{ id:
           <section className="mt-16 border-t border-border pt-12" aria-label="Experiências relacionadas">
             <Reveal>
               <h2 className="font-heading text-2xl font-semibold text-foreground sm:text-3xl">
-                Você também pode <em className="italic text-ocean">gostar</em>
+                Você também pode <span className="text-ocean">gostar</span>
               </h2>
             </Reveal>
             <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

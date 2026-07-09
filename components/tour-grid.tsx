@@ -25,7 +25,7 @@ export function TourGrid() {
         <Reveal className="flex flex-col items-start gap-4">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ocean">Catálogo</p>
           <h2 className="font-heading text-3xl font-semibold text-balance text-foreground sm:text-4xl">
-            Todas as <em className="italic text-ocean">experiências</em>
+            Todas as <span className="text-ocean">experiências</span>
           </h2>
         </Reveal>
 

@@ -49,7 +49,7 @@ export default function CuponsPage() {
               Ofertas exclusivas
             </p>
             <h1 className="animate-fade-up animation-delay-100 mt-5 max-w-2xl font-heading text-4xl font-semibold leading-tight text-balance sm:text-5xl">
-              Cupons para economizar na sua <em className="italic text-sand">viagem</em>
+              Cupons para economizar na sua <span className="text-sand">viagem</span>
             </h1>
             <p className="animate-fade-up animation-delay-200 mt-5 max-w-lg text-pretty text-base leading-relaxed text-ink-foreground/75">
               Apresente o código no WhatsApp na hora de fazer sua reserva e garanta o desconto.

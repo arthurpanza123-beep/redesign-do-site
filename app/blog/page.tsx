@@ -73,7 +73,7 @@ export default function BlogPage() {
               Blog
             </p>
             <h1 className="animate-fade-up animation-delay-100 mt-4 max-w-2xl font-heading text-4xl font-semibold leading-tight text-balance sm:text-5xl">
-              Histórias e dicas de quem vive a <em className="italic text-sand">Região dos Lagos</em>
+              Histórias e dicas de quem vive a <span className="text-sand">Região dos Lagos</span>
             </h1>
             <p className="animate-fade-up animation-delay-200 mt-5 max-w-lg text-pretty text-base leading-relaxed text-ink-foreground/75">
               Roteiros, guias completos e segredos locais para você aproveitar cada minuto da viagem.
