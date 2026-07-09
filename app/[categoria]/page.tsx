@@ -6,8 +6,7 @@ import { SiteFooter } from '@/components/site-footer'
 import { WhatsappButton } from '@/components/whatsapp-button'
 import { TourCard } from '@/components/tour-card'
 import { Reveal } from '@/components/reveal'
-import { PhotoPlaceholder } from '@/components/photo-placeholder'
-import { categoryInfos, getCategoryBySlug, getToursByCategory } from '@/lib/tours'
+import { categoryImages, categoryInfos, getCategoryBySlug, getToursByCategory } from '@/lib/tours'
 
 export function generateStaticParams() {
   return categoryInfos.map((c) => ({ categoria: c.slug }))
@@ -68,10 +67,10 @@ export default async function CategoryPage({
             </div>
 
             <div className="animate-fade-up animation-delay-200 hidden lg:block">
-              <PhotoPlaceholder
-                label={cat.photoLabel}
-                className="aspect-[16/10] w-full rounded-2xl border-ink-foreground/25 bg-ink-soft text-ink-foreground/60"
-                iconClassName="size-10 text-sand"
+              <img
+                src={categoryImages[cat.slug] || "/placeholder.svg"}
+                alt={cat.photoLabel}
+                className="aspect-[16/10] w-full rounded-2xl object-cover shadow-2xl shadow-black/30 ring-1 ring-ink-foreground/15"
               />
             </div>
           </div>

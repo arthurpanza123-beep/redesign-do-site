@@ -1,15 +1,16 @@
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import { PhotoPlaceholder } from '@/components/photo-placeholder'
-import type { Tour } from '@/lib/tours'
+import { getTourImage, type Tour } from '@/lib/tours'
 
 export function TourCard({ tour }: { tour: Tour }) {
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-2xl bg-card ring-1 ring-border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-ink/10 hover:ring-ocean/40">
       <div className="relative overflow-hidden">
-        <PhotoPlaceholder
-          label={tour.photoLabel}
-          className="aspect-[4/3] w-full rounded-none border-0 transition-transform duration-500 group-hover:scale-[1.03]"
+        <img
+          src={getTourImage(tour.id) || "/placeholder.svg"}
+          alt={tour.photoLabel}
+          loading="lazy"
+          className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
         />
         <span className="absolute left-4 top-4 rounded-full bg-ink/85 px-3 py-1 text-[11px] font-medium tracking-wide text-ink-foreground backdrop-blur-sm">
           {tour.category}

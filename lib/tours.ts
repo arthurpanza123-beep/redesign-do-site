@@ -20,6 +20,59 @@ export function getTour(id: string): Tour | undefined {
   return tours.find((t) => t.id === id)
 }
 
+/**
+ * Fotos dos passeios — substitua os arquivos em /public/images/ pelas suas
+ * fotos reais mantendo o mesmo nome de arquivo.
+ */
+export const tourImages: Record<string, string> = {
+  'city-tour-arraial': '/images/passeio-barco.png',
+  'passeio-buggy': '/images/buggy.png',
+  'aluguel-lancha': '/images/lancha.png',
+  'catamara-buzios': '/images/catamara.png',
+  'escuna-buzios': '/images/escuna.png',
+  'transfer-rio-buzios': '/images/transfer.png',
+  'hospedagem-buzios': '/images/hospedagem.png',
+  'aluguel-buggy': '/images/buggy.png',
+  'quadriciclo-arraial': '/images/quadriciclo.png',
+  'quadriciclo-cabo-frio': '/images/quadriciclo.png',
+  'jet-ski': '/images/jetski.png',
+  'mergulho-buzios': '/images/mergulho.png',
+  'city-tour-buzios': '/images/praia-buzios.png',
+  'city-tour-cabo-frio': '/images/cabo-frio.png',
+  'city-tour-rio': '/images/city-rio.png',
+  'barco-arraial': '/images/passeio-barco.png',
+  'trolley-buzios': '/images/trolley.png',
+  'full-day-buzios': '/images/praia-buzios.png',
+  'full-day-arraial-cabo': '/images/passeio-barco.png',
+  'full-day-ilha-grande': '/images/ilha-grande.png',
+  'aluguel-carro': '/images/transfer.png',
+  'aluguel-scooter': '/images/buggy.png',
+  'aluguel-van': '/images/transfer.png',
+  'jet-ski-passeio': '/images/jetski.png',
+  'eco-trilhas': '/images/trilha.png',
+  'canoa-havaiana': '/images/ilha-grande.png',
+  'mergulho-arraial': '/images/mergulho.png',
+  'buggy-arraial': '/images/buggy.png',
+  'buggy-cabo-frio': '/images/buggy.png',
+  'catamara-cabo-frio': '/images/catamara.png',
+  'asa-delta': '/images/aventura-aerea.png',
+  helicoptero: '/images/aventura-aerea.png',
+  quadriciclo: '/images/quadriciclo.png',
+}
+
+export function getTourImage(id: string): string {
+  return tourImages[id] ?? '/images/hero-buzios.png'
+}
+
+export const categoryImages: Record<string, string> = {
+  passeios: '/images/passeio-barco.png',
+  hospedagens: '/images/hospedagem.png',
+  lanchas: '/images/lancha.png',
+  'aluguel-de-veiculos': '/images/buggy.png',
+  transfer: '/images/transfer.png',
+  aventuras: '/images/quadriciclo.png',
+}
+
 export const categories: Category[] = [
   'Passeios',
   'Hospedagens',

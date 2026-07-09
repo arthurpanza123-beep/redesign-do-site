@@ -2,7 +2,6 @@ import { ArrowUpRight } from 'lucide-react'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { WhatsappButton } from '@/components/whatsapp-button'
-import { PhotoPlaceholder } from '@/components/photo-placeholder'
 import { Reveal } from '@/components/reveal'
 
 export const metadata = {
@@ -18,6 +17,7 @@ const posts = [
     tag: 'Roteiros',
     date: '12 de junho, 2026',
     photoLabel: 'Foto do post — praias de Búzios',
+    image: '/images/praia-buzios.png',
   },
   {
     title: 'Arraial do Cabo: como visitar o Caribe brasileiro',
@@ -26,6 +26,7 @@ const posts = [
     tag: 'Guias',
     date: '28 de maio, 2026',
     photoLabel: 'Foto do post — Arraial do Cabo',
+    image: '/images/passeio-barco.png',
   },
   {
     title: 'Passeio de lancha ou escuna: qual escolher?',
@@ -34,6 +35,7 @@ const posts = [
     tag: 'Dicas',
     date: '15 de maio, 2026',
     photoLabel: 'Foto do post — lancha vs escuna',
+    image: '/images/lancha.png',
   },
   {
     title: 'Onde comer em Búzios: da Rua das Pedras aos quiosques',
@@ -42,6 +44,7 @@ const posts = [
     tag: 'Gastronomia',
     date: '2 de maio, 2026',
     photoLabel: 'Foto do post — gastronomia',
+    image: '/images/praia-buzios.png',
   },
   {
     title: 'Roteiro de 3 dias na Região dos Lagos',
@@ -50,6 +53,7 @@ const posts = [
     tag: 'Roteiros',
     date: '20 de abril, 2026',
     photoLabel: 'Foto do post — roteiro 3 dias',
+    image: '/images/cabo-frio.png',
   },
   {
     title: 'Mergulho para iniciantes: o que esperar do batismo',
@@ -58,6 +62,7 @@ const posts = [
     tag: 'Aventuras',
     date: '8 de abril, 2026',
     photoLabel: 'Foto do post — mergulho',
+    image: '/images/mergulho.png',
   },
 ]
 
@@ -87,9 +92,11 @@ export default function BlogPage() {
               <Reveal key={post.title} delay={(i % 3) * 80}>
                 <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-card ring-1 ring-border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-ink/10 hover:ring-ocean/40">
                   <div className="overflow-hidden">
-                    <PhotoPlaceholder
-                      label={post.photoLabel}
-                      className="aspect-[16/10] w-full rounded-none border-0 transition-transform duration-500 group-hover:scale-[1.03]"
+                    <img
+                      src={post.image || "/placeholder.svg"}
+                      alt={post.photoLabel}
+                      loading="lazy"
+                      className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
                     />
                   </div>
                   <div className="flex flex-1 flex-col p-5">

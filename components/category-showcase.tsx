@@ -1,8 +1,7 @@
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
-import { PhotoPlaceholder } from '@/components/photo-placeholder'
 import { Reveal } from '@/components/reveal'
-import { categoryInfos, getToursByCategory } from '@/lib/tours'
+import { categoryImages, categoryInfos, getToursByCategory } from '@/lib/tours'
 
 export function CategoryShowcase() {
   return (
@@ -30,11 +29,14 @@ export function CategoryShowcase() {
                 href={`/${cat.slug}`}
                 className="group relative flex flex-col overflow-hidden rounded-2xl bg-card ring-1 ring-border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-ink/10 hover:ring-ocean/40"
               >
-                <div className="overflow-hidden">
-                  <PhotoPlaceholder
-                    label={cat.photoLabel}
-                    className="aspect-[16/10] w-full rounded-none border-0 transition-transform duration-500 group-hover:scale-[1.03]"
+                <div className="relative overflow-hidden">
+                  <img
+                    src={categoryImages[cat.slug] || "/placeholder.svg"}
+                    alt={cat.photoLabel}
+                    loading="lazy"
+                    className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 </div>
                 <div className="flex items-start justify-between gap-3 p-5">
                   <div>

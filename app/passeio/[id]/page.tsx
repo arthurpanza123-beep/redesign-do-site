@@ -11,7 +11,7 @@ import { PackageSidebar } from '@/components/package-sidebar'
 import { PhotoPlaceholder } from '@/components/photo-placeholder'
 import { TourCard } from '@/components/tour-card'
 import { Reveal } from '@/components/reveal'
-import { getTour, tours, categoryInfos } from '@/lib/tours'
+import { getTour, getTourImage, tours, categoryInfos } from '@/lib/tours'
 
 export function generateStaticParams() {
   return tours.map((t) => ({ id: t.id }))
@@ -71,7 +71,7 @@ export default async function TourDetailPage({ params }: { params: Promise<{ id:
 
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_360px]">
           <div className="animate-fade-up animation-delay-100">
-            <TourGallery title={tour.title} />
+            <TourGallery title={tour.title} imageSrc={getTourImage(tour.id)} />
 
             <ul className="mt-5 flex flex-wrap gap-2">
               {tour.tags.map((tag) => (
