@@ -1,15 +1,16 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Poppins, Open_Sans } from 'next/font/google'
+import { Playfair_Display, DM_Sans } from 'next/font/google'
 import './globals.css'
 
-const heading = Poppins({
+const heading = Playfair_Display({
   subsets: ['latin'],
-  weight: ['500', '600', '700', '800'],
+  weight: ['400', '500', '600', '700', '800'],
+  style: ['normal', 'italic'],
   variable: '--font-heading',
 })
 
-const body = Open_Sans({
+const body = DM_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-body',
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#3fa9c4',
+  themeColor: '#1a2740',
 }
 
 export default function RootLayout({
@@ -33,8 +34,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className={`${heading.variable} ${body.variable}`}>
-      <body className="antialiased bg-background">
+    <html lang="pt-BR" className={`${heading.variable} ${body.variable} bg-background`}>
+      <body className="antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

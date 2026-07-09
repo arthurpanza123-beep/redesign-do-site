@@ -29,6 +29,73 @@ export const categories: Category[] = [
   'Aventuras',
 ]
 
+export interface CategoryInfo {
+  slug: string
+  name: Category
+  headline: string
+  description: string
+  photoLabel: string
+}
+
+export const categoryInfos: CategoryInfo[] = [
+  {
+    slug: 'passeios',
+    name: 'Passeios',
+    headline: 'Passeios inesquecíveis pela Região dos Lagos',
+    description:
+      'De barco, catamarã, escuna ou trolley — roteiros pelas praias mais bonitas de Búzios, Arraial do Cabo, Cabo Frio e Rio de Janeiro.',
+    photoLabel: 'Foto de capa — Passeios (mar/praia panorâmica)',
+  },
+  {
+    slug: 'hospedagens',
+    name: 'Hospedagens',
+    headline: 'Hospedagens para todos os gostos e preços',
+    description:
+      'Pousadas e casas selecionadas em Búzios. Monte seu pacote com passeios e transfer inclusos e aproveite a viagem sem preocupação.',
+    photoLabel: 'Foto de capa — Hospedagens (piscina/pousada)',
+  },
+  {
+    slug: 'lanchas',
+    name: 'Lanchas',
+    headline: 'Lanchas privativas com marinheiro incluso',
+    description:
+      'Alugue uma lancha exclusiva para o seu grupo e navegue pelas águas cristalinas com roteiro personalizado.',
+    photoLabel: 'Foto de capa — Lanchas (lancha em alto mar)',
+  },
+  {
+    slug: 'aluguel-de-veiculos',
+    name: 'Aluguel de Veículos',
+    headline: 'Liberdade para explorar no seu ritmo',
+    description:
+      'Buggys, carros, scooters e vans com seguro incluso, retirada e devolução facilitadas.',
+    photoLabel: 'Foto de capa — Aluguel de Veículos (buggy na orla)',
+  },
+  {
+    slug: 'transfer',
+    name: 'Transfer',
+    headline: 'Transfers porta a porta com conforto',
+    description:
+      'Rio x Búzios, aeroportos e traslados regionais com motoristas experientes e veículos climatizados.',
+    photoLabel: 'Foto de capa — Transfer (van/carro executivo)',
+  },
+  {
+    slug: 'aventuras',
+    name: 'Aventuras',
+    headline: 'Adrenalina à beira-mar',
+    description:
+      'Quadriciclo, jet ski, mergulho, asa delta, helicóptero e trilhas — experiências para quem quer mais emoção.',
+    photoLabel: 'Foto de capa — Aventuras (quadriciclo/mergulho)',
+  },
+]
+
+export function getCategoryBySlug(slug: string): CategoryInfo | undefined {
+  return categoryInfos.find((c) => c.slug === slug)
+}
+
+export function getToursByCategory(category: Category): Tour[] {
+  return tours.filter((t) => t.category === category)
+}
+
 export const tours: Tour[] = [
   {
     id: 'city-tour-arraial',
