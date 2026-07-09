@@ -39,19 +39,19 @@ export default async function CategoryPage({
       <main>
         {/* Cabeçalho da categoria */}
         <section className="bg-ink text-ink-foreground">
-          <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 py-14 lg:grid-cols-[1.1fr_1fr] lg:px-8 lg:py-20">
+          <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 pb-14 pt-28 lg:grid-cols-[1.1fr_1fr] lg:px-8 lg:pb-20 lg:pt-36">
             <div>
               <nav aria-label="Trilha de navegação" className="animate-fade-up">
                 <ol className="flex items-center gap-1.5 text-xs text-ink-foreground/60">
                   <li>
-                    <Link href="/" className="transition-colors hover:text-sand">
+                    <Link href="/" className="transition-colors hover:text-ocean-light">
                       Home
                     </Link>
                   </li>
                   <li aria-hidden="true">
                     <ChevronRight className="size-3.5" />
                   </li>
-                  <li className="font-medium text-sand">{cat.name}</li>
+                  <li className="font-medium text-ocean-light">{cat.name}</li>
                 </ol>
               </nav>
 

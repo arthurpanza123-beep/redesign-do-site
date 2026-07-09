@@ -41,7 +41,7 @@ export function SiteFooter() {
             href="https://wa.me/5522998945070"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-sand px-7 py-3.5 text-sm font-semibold text-sand-foreground transition-all hover:brightness-105 hover:shadow-lg"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-ocean px-7 py-3.5 text-sm font-semibold text-ocean-foreground shadow-lg shadow-ocean/25 transition-all hover:-translate-y-px hover:brightness-110"
           >
             <MessageCircle className="size-4" aria-hidden="true" />
             Falar no WhatsApp
@@ -53,11 +53,11 @@ export function SiteFooter() {
         {/* Marca */}
         <div className="flex flex-col items-start gap-4">
           <div className="flex items-center gap-2.5">
-            <span className="flex size-10 items-center justify-center rounded-full bg-sand text-sand-foreground">
+            <span className="flex size-10 items-center justify-center rounded-full bg-ocean text-ocean-foreground">
               <Sailboat className="size-5" aria-hidden="true" />
             </span>
             <span className="font-heading text-xl font-bold tracking-tight">
-              Búzios <span className="text-sand">Trip Tour</span>
+              Búzios <span className="text-ocean-light">Trip Tour</span>
             </span>
           </div>
           <p className="max-w-xs text-sm leading-relaxed text-ink-foreground/70">
@@ -69,7 +69,7 @@ export function SiteFooter() {
               <li key={item}>
                 <a
                   href="#"
-                  className="inline-flex rounded-full border border-ink-foreground/15 px-4 py-1.5 text-xs font-medium text-ink-foreground/75 transition-colors hover:border-sand hover:text-sand"
+                  className="inline-flex rounded-full border border-ink-foreground/15 px-4 py-1.5 text-xs font-medium text-ink-foreground/75 transition-colors hover:border-ocean-light hover:text-ocean-light"
                 >
                   {item}
                 </a>
@@ -88,7 +88,7 @@ export function SiteFooter() {
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  className="text-sm text-ink-foreground/80 transition-colors hover:text-sand"
+                  className="text-sm text-ink-foreground/80 transition-colors hover:text-ocean-light"
                 >
                   {item.label}
                 </Link>
@@ -107,7 +107,7 @@ export function SiteFooter() {
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  className="text-sm text-ink-foreground/80 transition-colors hover:text-sand"
+                  className="text-sm text-ink-foreground/80 transition-colors hover:text-ocean-light"
                 >
                   {item.label}
                 </Link>
@@ -123,26 +123,26 @@ export function SiteFooter() {
           </h3>
           <ul className="mt-5 space-y-3 text-sm text-ink-foreground/80">
             <li className="flex items-center gap-2.5">
-              <Phone className="size-4 shrink-0 text-sand" aria-hidden="true" />
+              <Phone className="size-4 shrink-0 text-ocean-light" aria-hidden="true" />
               +55 (22) 99894-5070
             </li>
             <li className="flex items-center gap-2.5">
-              <Mail className="size-4 shrink-0 text-sand" aria-hidden="true" />
+              <Mail className="size-4 shrink-0 text-ocean-light" aria-hidden="true" />
               contato@buziostriptour.com
             </li>
             <li className="flex items-center gap-2.5">
-              <Clock className="size-4 shrink-0 text-sand" aria-hidden="true" />
+              <Clock className="size-4 shrink-0 text-ocean-light" aria-hidden="true" />
               Segunda a domingo, das 7h às 22h
             </li>
             <li className="flex items-center gap-2.5">
-              <MapPin className="size-4 shrink-0 text-sand" aria-hidden="true" />
+              <MapPin className="size-4 shrink-0 text-ocean-light" aria-hidden="true" />
               Armação dos Búzios, RJ
             </li>
           </ul>
           <PhotoPlaceholder
             label="Mapa (Google Maps)"
             className="mt-5 h-24 w-full rounded-lg border-ink-foreground/20 bg-ink-soft text-ink-foreground/60"
-            iconClassName="text-sand"
+            iconClassName="text-ocean-light"
           />
         </div>
       </div>

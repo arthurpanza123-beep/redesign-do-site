@@ -42,7 +42,7 @@ export function Testimonials() {
         <Reveal delay={120} className="mt-10 text-center">
           <div className="flex justify-center gap-1" aria-label="Avaliação 5 estrelas">
             {Array.from({ length: 5 }).map((_, s) => (
-              <Star key={s} className="size-5 fill-sand text-sand" aria-hidden="true" />
+              <Star key={s} className="size-5 fill-ocean text-ocean" aria-hidden="true" />
             ))}
           </div>
 

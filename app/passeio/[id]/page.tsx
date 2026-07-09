@@ -45,7 +45,7 @@ export default async function TourDetailPage({ params }: { params: Promise<{ id:
     <div className="min-h-screen bg-background">
       <SiteHeader />
 
-      <main className="mx-auto max-w-6xl px-4 py-8 lg:py-12">
+      <main className="mx-auto max-w-6xl px-4 pb-8 pt-24 lg:pb-12 lg:pt-28">
         {/* Breadcrumb */}
         <nav aria-label="Trilha de navegação" className="animate-fade-up mb-6">
           <ol className="flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground">
@@ -131,7 +131,7 @@ export default async function TourDetailPage({ params }: { params: Promise<{ id:
                 </ul>
               </div>
 
-              <p className="rounded-xl border border-sand bg-sand/10 p-4 text-sm font-medium text-foreground">
+              <p className="rounded-xl border border-ocean/40 bg-ocean/10 p-4 text-sm font-medium text-foreground">
                 Atenção: o roteiro pode ser alterado, transferido ou cancelado de acordo com as
                 condições climáticas.
               </p>

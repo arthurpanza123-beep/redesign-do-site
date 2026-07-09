@@ -73,12 +73,13 @@ export default function BlogPage() {
 
       <main>
         <section className="bg-ink text-ink-foreground">
-          <div className="mx-auto max-w-7xl px-4 py-14 lg:px-8 lg:py-20">
-            <p className="animate-fade-up text-xs font-semibold uppercase tracking-[0.2em] text-sand">
+          <div className="mx-auto max-w-7xl px-4 pb-14 pt-28 lg:px-8 lg:pb-20 lg:pt-36">
+            <p className="animate-fade-up text-xs font-semibold uppercase tracking-[0.2em] text-ocean-light">
               Blog
             </p>
             <h1 className="animate-fade-up animation-delay-100 mt-4 max-w-2xl font-heading text-4xl font-semibold leading-tight text-balance sm:text-5xl">
-              Histórias e dicas de quem vive a <span className="text-sand">Região dos Lagos</span>
+              Histórias e dicas de quem vive a{' '}
+              <span className="text-ocean-light">Região dos Lagos</span>
             </h1>
             <p className="animate-fade-up animation-delay-200 mt-5 max-w-lg text-pretty text-base leading-relaxed text-ink-foreground/75">
               Roteiros, guias completos e segredos locais para você aproveitar cada minuto da viagem.

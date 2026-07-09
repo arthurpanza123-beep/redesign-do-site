@@ -43,13 +43,13 @@ export default function CuponsPage() {
 
       <main>
         <section className="bg-ink text-ink-foreground">
-          <div className="mx-auto max-w-7xl px-4 py-14 lg:px-8 lg:py-20">
+          <div className="mx-auto max-w-7xl px-4 pb-14 pt-28 lg:px-8 lg:pb-20 lg:pt-36">
             <p className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-ink-foreground/15 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-ink-foreground/70">
-              <Ticket className="size-3.5 text-sand" aria-hidden="true" />
+              <Ticket className="size-3.5 text-ocean-light" aria-hidden="true" />
               Ofertas exclusivas
             </p>
             <h1 className="animate-fade-up animation-delay-100 mt-5 max-w-2xl font-heading text-4xl font-semibold leading-tight text-balance sm:text-5xl">
-              Cupons para economizar na sua <span className="text-sand">viagem</span>
+              Cupons para economizar na sua <span className="text-ocean-light">viagem</span>
             </h1>
             <p className="animate-fade-up animation-delay-200 mt-5 max-w-lg text-pretty text-base leading-relaxed text-ink-foreground/75">
               Apresente o código no WhatsApp na hora de fazer sua reserva e garanta o desconto.

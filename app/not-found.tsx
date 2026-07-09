@@ -12,11 +12,11 @@ export default function NotFound() {
       />
 
       <div className="relative z-10 flex w-full max-w-xl flex-col items-center text-center">
-        <span className="flex size-14 items-center justify-center rounded-full bg-sand text-sand-foreground">
+        <span className="flex size-14 items-center justify-center rounded-full bg-ocean text-ocean-foreground">
           <Sailboat className="size-7" aria-hidden="true" />
         </span>
 
-        <p className="mt-8 font-heading text-7xl font-bold tracking-tight text-sand sm:text-8xl">
+        <p className="mt-8 font-heading text-7xl font-bold tracking-tight text-ocean-light sm:text-8xl">
           404
         </p>
 
@@ -31,14 +31,14 @@ export default function NotFound() {
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <Link
             href="/"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-sand px-7 py-3.5 text-sm font-semibold text-sand-foreground transition-all hover:brightness-105 hover:shadow-lg"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-ocean px-7 py-3.5 text-sm font-semibold text-ocean-foreground shadow-lg shadow-ocean/25 transition-all hover:brightness-110"
           >
             <Home className="size-4" aria-hidden="true" />
             Voltar ao início
           </Link>
           <Link
             href="/passeios"
-            className="inline-flex items-center justify-center gap-2 rounded-full border border-ink-foreground/20 px-7 py-3.5 text-sm font-semibold text-ink-foreground transition-colors hover:border-sand hover:text-sand"
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-ink-foreground/20 px-7 py-3.5 text-sm font-semibold text-ink-foreground transition-colors hover:border-ocean-light hover:text-ocean-light"
           >
             <Compass className="size-4" aria-hidden="true" />
             Ver passeios
@@ -55,7 +55,7 @@ export default function NotFound() {
               <li key={cat.slug}>
                 <Link
                   href={`/${cat.slug}`}
-                  className="inline-flex rounded-full border border-ink-foreground/15 px-4 py-1.5 text-xs font-medium text-ink-foreground/80 transition-colors hover:border-sand hover:text-sand"
+                  className="inline-flex rounded-full border border-ink-foreground/15 px-4 py-1.5 text-xs font-medium text-ink-foreground/80 transition-colors hover:border-ocean-light hover:text-ocean-light"
                 >
                   {cat.name}
                 </Link>

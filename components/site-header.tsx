@@ -24,14 +24,14 @@ function Logo() {
       className="group flex items-center gap-2.5"
       aria-label="Búzios Trip Tour — Página inicial"
     >
-      <span className="flex size-9 items-center justify-center rounded-full bg-sand text-sand-foreground transition-transform duration-300 group-hover:rotate-6">
+      <span className="flex size-9 items-center justify-center rounded-full bg-ocean text-ocean-foreground shadow-lg shadow-ocean/30 transition-transform duration-300 group-hover:rotate-6">
         <Sailboat className="size-5" aria-hidden="true" />
       </span>
       <span className="flex flex-col leading-none">
-        <span className="font-heading text-lg font-bold tracking-tight text-ink-foreground">
-          Búzios <span className="text-sand">Trip Tour</span>
+        <span className="font-heading text-lg font-bold tracking-tight text-white">
+          Búzios <span className="text-ocean-light">Trip Tour</span>
         </span>
-        <span className="mt-0.5 text-[10px] font-medium uppercase tracking-[0.22em] text-ink-foreground/60">
+        <span className="mt-0.5 text-[10px] font-medium uppercase tracking-[0.22em] text-white/55">
           Região dos Lagos · RJ
         </span>
       </span>
@@ -59,10 +59,10 @@ export function SiteHeader() {
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 border-b text-ink-foreground transition-all duration-300',
+        'fixed inset-x-0 top-0 z-50 transition-all duration-500',
         scrolled || open
-          ? 'border-ink-foreground/10 bg-ink/95 shadow-lg shadow-ink/20 backdrop-blur-md'
-          : 'border-transparent bg-ink',
+          ? 'border-b border-white/10 bg-ink/75 shadow-lg shadow-ink/20 backdrop-blur-xl'
+          : 'border-b border-white/10 bg-ink/30 backdrop-blur-md',
       )}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 lg:h-[76px] lg:px-8">
@@ -80,8 +80,8 @@ export function SiteHeader() {
                 className={cn(
                   'relative rounded-full px-3.5 py-2 text-[13px] font-medium tracking-wide transition-colors duration-200',
                   active
-                    ? 'bg-ink-foreground/10 text-sand'
-                    : 'text-ink-foreground/75 hover:bg-ink-foreground/5 hover:text-ink-foreground',
+                    ? 'bg-white/15 text-white shadow-inner'
+                    : 'text-white/70 hover:bg-white/10 hover:text-white',
                 )}
               >
                 {item.label}
@@ -95,14 +95,14 @@ export function SiteHeader() {
             href="https://wa.me/5522998945070"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center rounded-full bg-sand px-5 py-2.5 text-[13px] font-semibold text-sand-foreground transition-all duration-200 hover:brightness-105 hover:shadow-md sm:inline-flex"
+            className="hidden items-center rounded-full bg-ocean px-5 py-2.5 text-[13px] font-semibold text-ocean-foreground shadow-lg shadow-ocean/25 transition-all duration-200 hover:-translate-y-px hover:brightness-110 sm:inline-flex"
           >
             Reservar agora
           </a>
 
           <button
             type="button"
-            className="inline-flex size-10 items-center justify-center rounded-full text-ink-foreground transition-colors hover:bg-ink-foreground/10 xl:hidden"
+            className="inline-flex size-10 items-center justify-center rounded-full text-white transition-colors hover:bg-white/10 xl:hidden"
             aria-label={open ? 'Fechar menu' : 'Abrir menu'}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
@@ -115,8 +115,8 @@ export function SiteHeader() {
       {/* Navegação mobile */}
       <nav
         className={cn(
-          'grid overflow-hidden bg-ink transition-[grid-template-rows] duration-300 ease-out xl:hidden',
-          open ? 'grid-rows-[1fr] border-t border-ink-foreground/10' : 'grid-rows-[0fr]',
+          'grid overflow-hidden transition-[grid-template-rows] duration-300 ease-out xl:hidden',
+          open ? 'grid-rows-[1fr] border-t border-white/10' : 'grid-rows-[0fr]',
         )}
         aria-label="Navegação mobile"
       >
@@ -130,8 +130,8 @@ export function SiteHeader() {
                     href={item.href}
                     aria-current={active ? 'page' : undefined}
                     className={cn(
-                      'flex items-center justify-between border-b border-ink-foreground/8 py-3.5 text-sm font-medium transition-colors',
-                      active ? 'text-sand' : 'text-ink-foreground/80 hover:text-ink-foreground',
+                      'flex items-center justify-between border-b border-white/10 py-3.5 text-sm font-medium transition-colors',
+                      active ? 'text-ocean-light' : 'text-white/80 hover:text-white',
                     )}
                   >
                     {item.label}
@@ -144,7 +144,7 @@ export function SiteHeader() {
                 href="https://wa.me/5522998945070"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex w-full items-center justify-center rounded-full bg-sand px-5 py-3 text-sm font-semibold text-sand-foreground"
+                className="flex w-full items-center justify-center rounded-full bg-ocean px-5 py-3 text-sm font-semibold text-ocean-foreground"
               >
                 Reservar agora
               </a>

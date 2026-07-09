@@ -29,18 +29,18 @@ export function WhyUs() {
     <section className="bg-ink text-ink-foreground" aria-label="Por que escolher a Búzios Trip Tour">
       <div className="mx-auto max-w-7xl px-4 py-16 lg:px-8 lg:py-24">
         <Reveal className="max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sand">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ocean-light">
             Por que a Búzios Trip Tour
           </p>
           <h2 className="mt-3 font-heading text-3xl font-semibold text-balance sm:text-4xl">
-            Viaje com quem cuida de <span className="text-sand">cada detalhe</span>
+            Viaje com quem cuida de <span className="text-ocean-light">cada detalhe</span>
           </h2>
         </Reveal>
 
         <div className="mt-12 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item, i) => (
             <Reveal key={item.title} delay={i * 90} className="flex flex-col items-start gap-4">
-              <span className="flex size-12 items-center justify-center rounded-2xl bg-sand/15 text-sand ring-1 ring-sand/30">
+              <span className="flex size-12 items-center justify-center rounded-2xl bg-ocean/20 text-ocean-light ring-1 ring-ocean/40">
                 <item.icon className="size-6" aria-hidden="true" />
               </span>
               <div>
