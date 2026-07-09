@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { PhotoPlaceholder } from '@/components/photo-placeholder'
 import type { Tour } from '@/lib/tours'
 
@@ -11,7 +12,9 @@ export function TourCard({ tour }: { tour: Tour }) {
 
       <div className="flex flex-1 flex-col p-4">
         <h3 className="font-heading text-sm font-bold uppercase tracking-wide text-foreground">
-          {tour.title}
+          <Link href={`/passeio/${tour.id}`} className="transition-colors hover:text-navy">
+            {tour.title}
+          </Link>
         </h3>
 
         <ul className="mt-2 flex flex-wrap gap-1.5">
@@ -33,12 +36,12 @@ export function TourCard({ tour }: { tour: Tour }) {
           </p>
         </div>
 
-        <a
-          href="#"
+        <Link
+          href={`/passeio/${tour.id}`}
           className="mt-4 inline-flex w-full items-center justify-center rounded-md bg-navy px-4 py-2.5 text-sm font-semibold text-navy-foreground transition-colors hover:bg-navy-dark"
         >
           Informações &amp; Reservas
-        </a>
+        </Link>
       </div>
     </article>
   )

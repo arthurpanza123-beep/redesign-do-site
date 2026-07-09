@@ -16,6 +16,10 @@ export interface Tour {
   photoLabel: string
 }
 
+export function getTour(id: string): Tour | undefined {
+  return tours.find((t) => t.id === id)
+}
+
 export const categories: Category[] = [
   'Passeios',
   'Hospedagens',
