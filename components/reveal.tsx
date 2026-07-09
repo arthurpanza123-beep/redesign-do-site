@@ -21,6 +21,10 @@ export function Reveal({ children, className, delay = 0, as: Tag = 'div' }: Reve
   useEffect(() => {
     const el = ref.current
     if (!el) return
+    if (typeof IntersectionObserver === 'undefined') {
+      setVisible(true)
+      return
+    }
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -28,10 +32,17 @@ export function Reveal({ children, className, delay = 0, as: Tag = 'div' }: Reve
           observer.disconnect()
         }
       },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' },
+      // threshold 0: dispara assim que qualquer parte entra na viewport
+      // (thresholds altos nunca disparam em seções mais altas que a tela)
+      { threshold: 0, rootMargin: '0px 0px -32px 0px' },
     )
     observer.observe(el)
-    return () => observer.disconnect()
+    // Fallback de segurança: nunca deixar conteúdo permanentemente invisível
+    const fallback = window.setTimeout(() => setVisible(true), 1600)
+    return () => {
+      observer.disconnect()
+      window.clearTimeout(fallback)
+    }
   }, [])
 
   return (
